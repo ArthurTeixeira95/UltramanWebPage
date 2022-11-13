@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "PlanetKosmos";
+  src: url("fonts/planetkosmos.TTF");
+}
+
+@font-face {
+  font-family: "Urotraman";
+  src: url("fonts/urotraman-regular.otf");
+  font-style: normal;
+}
+
+
+body{
+  background: #f11;
+  margin: 0 !important;
+  overflow: hidden;
+  font-family: "Urotraman";
+}
+
+/* Menu Superior */
+
+.menu{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	opacity: 50%;
+	text-align: center;
+	transition: all 0.5s;
+	background: #000;
+}
+
+.menu:hover{
+	opacity: 100%;
+}
+
+.menu ul{
+	display: inline-flex;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center;
+}
+
+.menu ul li{
+	display: grid;
+	position: relative;
+}
+
+.menu ul li a{
+	float: left;
+	color: #ddd;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: "Urotraman";
+	padding: 6px 20px;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 3px;
+	text-shadow: 0 0 5px #000;
+	transition: all 0.5s;
+	background: #000;
+}
+
+.menu ul li:hover a{
+	color: #F00;
+}
+
+.menu ul li ul{
+	position: absolute;
+	top: 37px;
+	left: 50%;
+	width: 220px;
+	display: none;
+	margin-left: -110px !important;
+	transition: all 2s;
+}
+
+.menu ul li:hover ul{
+	display: unset;
+}
+
+.menu ul li ul li{
+	width: 100%;
+	float: left;
+}
+
+.menu ul li ul li a{
+	width: 100%;
+	float: left;
+	padding: 5px 0 !important;
+	border-top: 1px solid #f00;
+	font-size: 18px;
+	color: gray !important;
+}
+
+.menu ul li ul li a:hover{
+	color: #f00 !important;
+}
+
+/* Botões Navegadores */
+
+.botao-prev,.botao-next{
+	width: 50px;
+	height: 50px;
+	background: url("bg/arrow.png") #f00 no-repeat center center;
+	position: fixed;
+	z-index: 99;
+	border-radius: 45%;
+	opacity: 50%;
+	transition: all 0.5s;
+}
+/*
+.botao-prev::after,.botao-next::after {
+  content: "V";
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  float: left;
+  line-height: 50px;
+  font-size: 25px;
+}*/
+
+.botao-prev{
+	left: 5px;
+	transform: rotate(180deg);
+	top: 45px;
+}
+
+.botao-next{
+	right: 5px;
+	bottom: 10px;
+}
+
+.botao-prev:hover,.botao-next:hover{
+	opacity: 100%;
+}
+
+/* Ultraman Lista */
+
+.ultraman-list{
+	float: left;
+	width: 100%;
+}
+
+.ultraman-item{
+	float: left;
+	width: 100%;
+	background: url("bg/bg_4.jpg") no-repeat top center fixed;
+	background-size: 100% auto;
+	box-shadow: 0 0 10px red;
+}
+
+.ultraman-item:nth-child(even){
+	background: url("bg/bg_2.jpg") no-repeat top center fixed;
+}
+
+.ultraman-img{
+	width: 50%;
+	float: left;
+}
+
+.ultraman-item:nth-child(even) .ultraman-img{
+	float: right;
+}
+
+.ultraman-item img{
+	float: right;
+	margin: 8% 0 2%;
+	opacity: 0%;
+	transition: all 1.5s;
+}
+
+.ultraman-item.showing img{
+	opacity: 100%;
+	margin: 8% 15% 2%;
+}
+
+.ultraman-item:nth-child(even) .ultraman-img img{
+	float: left;
+}
+
+.ultraman-text{
+	width: 45%;
+	float: left;
+	text-align: center;
+	font-size: 70px;
+	color: #fff;
+	text-shadow: 0 0 10px #000;	
+}
+
+.ultraman-item:nth-child(even) .ultraman-text{
+	float: right;
+}
+
+.ultraman-text.title{
+	margin-top: 10%;
+	font-family: "PlanetKosmos";
+	line-height: 90px;
+	text-shadow: 0 0 5px #f00 !important;
+}
+
+.ultraman-item#ultra15 .ultraman-text.title{
+	line-height: 70px;
+}
+
+.ultraman-text.date{
+	font-size: 30px;
+	margin: 0 0 1% 0;
+}
+
+.ultraman-text.description{
+	font-size: 26px;
+	letter-spacing: 2px;
+	text-align: justify;
+	text-shadow: 0 0 5px #f00 !important;
+	opacity: 0;
+	transition: all 3s;
+}
+
+.ultraman-item.showing .ultraman-text.description{
+	opacity: 100;
+}
