@@ -152,6 +152,7 @@ body{
 
 .ultraman-item:nth-child(even){
 	background: url("bg/bg_2.jpg") no-repeat top center fixed;
+	background-size: 100% auto;
 }
 
 .ultraman-img{
