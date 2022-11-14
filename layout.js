@@ -26,6 +26,30 @@ jQuery(document).ready(function($){
         //$(target + ' img').attr("class", "showing");
         $(target).attr("class", "ultraman-item showing");
 
+
+        if (matches < 8 ) {
+                $('.menu-focus').attr("class", " ");
+                $('#item-menu-1').attr("class", "menu-focus");
+                
+		}else if (matches < 15 ) {
+                $('.menu-focus').attr("class", " ");
+                $('#item-menu-2').attr("class", "menu-focus");
+                
+		}else if (matches < 22 ) {
+                $('.menu-focus').attr("class", " ");
+                $('#item-menu-3').attr("class", "menu-focus");
+                
+		}else if (matches < 24 ) {
+                $('.menu-focus').attr("class", " ");
+                $('#item-menu-4').attr("class", "menu-focus");
+                
+		}else if (matches < 30 ) {
+                $('.menu-focus').attr("class", " ");
+                $('#item-menu-5').attr("class", "menu-focus");
+                
+		}
+
+
         return false;
                 
     });

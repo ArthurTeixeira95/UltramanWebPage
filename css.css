@@ -25,7 +25,7 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 98;
-	opacity: 50%;
+	opacity: 70%;
 	text-align: center;
 	transition: all 0.5s;
 	background: #000;
@@ -53,15 +53,15 @@ body{
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: "Urotraman";
-	padding: 6px 20px;	
-	font-size: 20px;
 	letter-spacing: 3px;
+	padding: 6px 20px;
+	font-size: 20px;	
 	text-shadow: 0 0 5px #000;
 	transition: all 0.5s;
 	background: #000;
 }
 
-.menu ul li:hover a{
+.menu ul li.menu-focus > a, .menu ul li:hover a{
 	color: #F00;
 }
 
